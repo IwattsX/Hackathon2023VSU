@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Real estate</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real estate </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="dashboard-container">
+    <div class="dashboard-container">
 		<h1 class="dashboard-heading">Welcome to Your Dashboard</h1>
 		<a href="#" class="logout-link" onclick="logout()">Logout</a>
 		<p>The future of Real Estate</p>
 	</div>
+    <div class="loan-calculator">
+        <h2>Loan Calculator</h2>
+        <form>
+            <label for="loan-amount">Loan Amount:</label>
+            <input type="number" id="loan-amount" name="loan-amount" required>
+    
+            <label for="interest-rate">Interest Rate:</label>
+            <input type="number" id="interest-rate" name="interest-rate" required>
+    
+            <label for="loan-term">Loan Term (in years):</label>
+            <input type="number" id="loan-term" name="loan-term" required>
+    
+            <label for="monthly-payment">Monthly Payment:</label>
+            <input type="number" id="monthly-payment" name="monthly-payment" readonly>
+    
+            <input type="submit" value="Calculate" onclick="calculateLoan()">
+        </form>
+    </div>
+    
+    <div class="loan-summary">
+        <h2>Loan Summary</h2>
+        <p>Monthly Payment: <span id="monthly-payment-summary"></span></p>
+        <p>Total Payment: <span id="total-payment"></span></p>
+        <p>Total Interest: <span id="total-interest"></span></p>
+    </div>
 
 	<script src="script.js"></script>
+    
 </body>
 </html>

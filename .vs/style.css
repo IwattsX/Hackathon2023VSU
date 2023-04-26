@@ -61,34 +61,97 @@ label {
     font-size: 18px;
 }
 
-/* Loggedin Page */
 
+/* top styling */
 .dashboard-container {
-    margin: auto;
-    width: 80%;
-    padding: 20px;
-    background-color: #FFFFFF;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loan-calculator {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.dashboard-heading {
-    text-align: center;
-    font-size: 36px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .loan-calculator h2 {
     margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.logout-link {
-    float: right;
+  }
+  
+  .loan-calculator form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loan-calculator label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .loan-calculator input[type="number"],
+  .loan-calculator input[type="submit"] {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .loan-calculator input[type="submit"] {
+    background-color: #2196f3;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .loan-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: none;
+  }
+  
+  .loan-summary h2 {
+    margin-top: 0;
+  }
+  
+  .loan-summary p {
+    margin: 10px 0;
+  }
+  
+  .loan-summary label {
+    font-weight: bold;
+  }
+  
+  .loan-summary input[type="number"] {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .logout-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     font-size: 18px;
+    color: #2196f3;
     text-decoration: none;
-    color: #333333;
-    transition: all 0.3s ease-in-out;
-}
-
-.logout-link:hover {
-    color: #4CAF50;
-}
+  }
+  
+  .logout-link:hover {
+    text-decoration: underline;
+  }
+  
