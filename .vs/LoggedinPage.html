@@ -8,14 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard-container">
-		<h1 class="dashboard-heading">Welcome to Your Dashboard</h1>
-		<a href="#" class="logout-link" onclick="logout()">Logout</a>
-		<p>The future of Real Estate</p>
-	</div>
-    <div class="loan-calculator">
+    <!-- <div class="loan-calculator">
         <h2>Loan Calculator</h2>
         <form>
+            <a href="#" class="logout-link" onclick="logout()">Logout</a>
             <label for="loan-amount">Loan Amount:</label>
             <input type="number" id="loan-amount" name="loan-amount" required>
     
@@ -37,7 +33,73 @@
         <p>Monthly Payment: <span id="monthly-payment-summary"></span></p>
         <p>Total Payment: <span id="total-payment"></span></p>
         <p>Total Interest: <span id="total-interest"></span></p>
-    </div>
+    </div> -->
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Find your next home</h1>
+            <p>Search homes for sale and for rent, and connect with real estate professionals in your area.</p>
+            <form>
+                <input type="text" placeholder="Search by address, neighborhood, city, or ZIP code">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="featured-properties">
+        <h2>Featured Properties in Petersburg</h2>
+        <div class="property-cards">
+            <div class="property-card">
+                <img src="zillowimage1.webp" alt="Property Image">
+                <div class="property-details">
+                    <h3>319 Country Ln, Petersburg, VA 23805</h3>
+                    <p>$228,000 | 4 bd | 3 ba | 2,242 sqft</p>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="zillowimage2.webp" alt="Property Image">
+                <div class="property-details">
+                    <h3>4009 Moss Point Dr, North Dinwiddie, VA 23803</h3>
+                    <p>$289,000 | 4 bd | 2 ba | 1,550 sqft</p>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="zillowimage3.webp" alt="Property Image">
+                <div class="property-details">
+                    <h3>4515 Hickory Rd, South Chesterfield, VA 23803</h3>
+                    <p>$225,000 | 4 bd | 3 ba | 1,513 sqft</p>
+                </div>
+            </div>
+        </div>
+        <div class="loan-calculator">
+            <h2>Loan Calculator</h2>
+            <form>
+                <a href="#" class="logout-link" onclick="logout()">Logout</a>
+                <label for="loan-amount">Loan Amount:</label>
+                <input type="number" id="loan-amount" name="loan-amount" required>
+        
+                <label for="interest-rate">Interest Rate:</label>
+                <input type="number" id="interest-rate" name="interest-rate" required>
+        
+                <label for="loan-term">Loan Term (in years):</label>
+                <input type="number" id="loan-term" name="loan-term" required>
+        
+                <label for="monthly-payment">Monthly Payment:</label>
+                <input type="number" id="monthly-payment" name="monthly-payment" readonly>
+        
+                <input type="submit" value="Calculate" onclick="calculateLoan()">
+            </form>
+        </div>
+        
+        <div class="loan-summary">
+            <h2>Loan Summary</h2>
+            <p>Monthly Payment: <span id="monthly-payment-summary"></span></p>
+            <p>Total Payment: <span id="total-payment"></span></p>
+            <p>Total Interest: <span id="total-interest"></span></p>
+        </div>
+        <a href="#" class="button">View More Properties</a>
+    </section>
 
 	<script src="script.js"></script>
     
