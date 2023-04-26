@@ -15,14 +15,21 @@ class ZillowAPI:
     def formatted_print(self, obj):
         text = json.dumps(obj, sort_keys=True, indent=4)
         print(text)
-url = "https://zillow56.p.rapidapi.com/search"
+        self.writeToJson(text)
+    
+    def writeToJson(self, text):
+        with open("ZillowRes.json", 'a') as Z:
+            Z.write(text)
 
-querystring = {"location":"petersburg, va"}
+            
+# url = "https://zillow56.p.rapidapi.com/search"
 
-headers = {
-	"content-type": "application/octet-stream",
-	"X-RapidAPI-Key": "6411aa307bmsh62eea7b677aac98p10de15jsn1dfc01090cd9",
-	"X-RapidAPI-Host": "zillow56.p.rapidapi.com"
-}
-zillowAPICall = ZillowAPI(url, querystring, headers)
+# querystring = {"location":"petersburg, va"}
+
+# headers = {
+# 	"content-type": "application/octet-stream",
+# 	"X-RapidAPI-Key": "6411aa307bmsh62eea7b677aac98p10de15jsn1dfc01090cd9",
+# 	"X-RapidAPI-Host": "zillow56.p.rapidapi.com"
+# }
+# zillowAPICall = ZillowAPI(url, querystring, headers)
 
