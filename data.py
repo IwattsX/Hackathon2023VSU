@@ -131,11 +131,16 @@ for k,v in RealtorRatingsDict.items():
 # print(len(listA))
 print(listA)
 
-obj = {}
+obj1 = {}
 for i in sortPricesList:
-     obj[i[1]] = i[0]
+     obj1[i[1]] = i[0]
 
 with open("HouseInformation.json", 'w') as houseFile:
-    text = json.dumps(obj, sort_keys=True, indent=4)
+    text = json.dumps(obj1, sort_keys=True, indent=4)
     houseFile.write(text)
+
+obj2 = RealtorRatingsDict.copy()
+with open("AgentInfo.json", 'w') as AgentFiles:
+     text = json.dumps(obj2, sort_keys=True, indent =4)
+     AgentFiles.write(text)
      
