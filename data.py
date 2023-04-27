@@ -61,7 +61,6 @@ with open("ZillowRes.json", 'r') as DataFile:
         if element["state"] != 'VA' or element['zipcode'] != "23803" or element['city'] != 'Petersburg': 
            continue
         count +=1
-        img_src.append([element['imgSrc'], element['streetAddress']])
         addressWCounts.append([count, element['streetAddress']])
         for key, value in element.items():
             print(f"{key} : {value}")
@@ -71,7 +70,8 @@ with open("ZillowRes.json", 'r') as DataFile:
                 if value == 0:
                      continue
                 prices.append(value)
-                pricesCountDict[value] = addressWCounts[count-1][1]
+                img_src.append([value, element['imgSrc'], element['streetAddress']])
+                pricesCountDict[value] =[addressWCounts[count-1][1], element['imgSrc']]
 
 
 
@@ -79,7 +79,11 @@ with open("ZillowRes.json", 'r') as DataFile:
 sortPricesList = []
 quickSort(prices, 0, len(prices) - 1)
 print(prices)
+print("DICTIONARY FOR PRICES PRICESCOUNTDICT")
+print(pricesCountDict)
 for i in range(len(prices)):
+    #  for j in img_src:
+    #       pricesCountDict[img_src[0]].append()
      print(f"{prices[i]} : {pricesCountDict[prices[i]]}")
      sortPricesList.append([prices[i], pricesCountDict[prices[i]]])
 
@@ -137,8 +141,14 @@ for k,v in RealtorRatingsDict.items():
 print(listA)
 
 obj1 = {}
+print(f"This is sorted prices list\n{sortPricesList}")
 for i in sortPricesList:
-     obj1[i[1]] = i[0]
+     print("This is i in sortPricesList")
+     print(i)
+     print()
+     obj1[i[1][0]] = [i[0], i[1][1]]
+
+print(f"This is obj1\n{obj1}")
 
 with open("HouseInformation.json", 'w') as houseFile:
     text = json.dumps(obj1, sort_keys=True, indent=4)
