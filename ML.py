@@ -44,7 +44,7 @@ for i in agentsList:
     #        print(f"{k} : {v}")
 
 i = 0
-while i < len(li) - 4:
+while i < len(li) - 3:
     listA.append([li[i],li[i+1],li[i+2], li[i+3]])
     i += 4
 
