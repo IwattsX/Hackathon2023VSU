@@ -40,13 +40,40 @@ function calculateLoan() {
     const loanSummaryEl = document.getElementById("loan-summary");
     loanSummaryEl.style.display = "none";
   }
-  function initMap() {
-    // Create a new map object
-    var map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 37.5407, lng: -77.4360 },
-    zoom: 10
-    });
-    }
+//   function initMap() {
+//     // Create a new map object
+//     var map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: 37.5407, lng: -77.4360 },
+//     zoom: 10
+//     });
+//     }
     
-    // Load the map when the webpage is loaded
-    google.maps.event.addDomListener(window, "load", initMap);
+//     // Load the map when the webpage is loaded
+//     google.maps.event.addDomListener(window, "load", initMap);
+// Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: 37.2279, lng: -77.4019 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
+}
+
+initMap();
