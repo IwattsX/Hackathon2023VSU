@@ -18,7 +18,7 @@ class ZillowAPI:
         self.writeToJson(text)
     
     def writeToJson(self, text):
-        with open("ZillowRes.json", 'a') as Z:
+        with open("ZillowRes.json", 'w') as Z:
             Z.write(text)
 
             
