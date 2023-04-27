@@ -1,3 +1,5 @@
+#Zillow's API
+#You have to use pip3 install requests
 import requests
 import json
 class ZillowAPI:
@@ -18,9 +20,19 @@ class ZillowAPI:
         self.writeToJson(text)
     
     def writeToJson(self, text):
-        with open("ZillowRes.json", 'a') as Z:
+        with open("ZillowRes.json", 'w') as Z:
             Z.write(text)
 
+url = "https://zillow56.p.rapidapi.com/search"
+
+querystring = {"location":"petersburg, va"}
+
+headers = {
+	"content-type": "application/octet-stream",
+	"X-RapidAPI-Key": "6411aa307bmsh62eea7b677aac98p10de15jsn1dfc01090cd9",
+	"X-RapidAPI-Host": "zillow56.p.rapidapi.com"
+}
+zillowAPICall = ZillowAPI(url, querystring, headers)
             
 # url = "https://zillow56.p.rapidapi.com/search"
 
