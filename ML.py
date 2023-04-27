@@ -1,15 +1,20 @@
-import requests
 import json
-from API import ZillowAPI
+
+petersburg_Houses = []
+
+with open("ZillowRes.json", 'r') as DataFile:
+    data = json.load(DataFile)
+    li = data['results']
+    count = 0
+    for element in li:
+        #NOT Petersburg,VA otherwise use the loop
+        if element["state"] != 'VA' or element['zipcode'] != "23803" or element['city'] != 'Petersburg': 
+           continue
+        count +=1
+        for key, value in element.items():
+            petersburg_Houses.append([count, key, value])
 
 
-url = "https://zillow56.p.rapidapi.com/search"
+for i in petersburg_Houses:
+    print(i)
 
-querystring = {"location":"petersburg, va"}
-
-headers = {
-	"content-type": "application/octet-stream",
-	"X-RapidAPI-Key": "6411aa307bmsh62eea7b677aac98p10de15jsn1dfc01090cd9",
-	"X-RapidAPI-Host": "zillow56.p.rapidapi.com"
-}
-zillowAPICall = ZillowAPI(url, querystring, headers)
