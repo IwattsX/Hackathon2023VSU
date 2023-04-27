@@ -5,7 +5,7 @@ There is a need to improve access to updated pricing information (e.g., loan rat
 Develop a tool that can provide homeowners with the information needed to find the best priced house and the best realtor and mortgage firm in an area of choice. The tool should compare pricing and changes within trends, and predict possible surges or dips.
 
 
-Data Categories:
+# Data Categories:
     1. Zipcode:
     2. State
     3. Price
@@ -16,3 +16,8 @@ Data Categories:
     8. Home typle/HPP
     9. Home Status
     10. Days on Zillow 
+
+# Data from:
+    1. https://www.consumerfinance.gov/data-research/hmda/historic-data/?geo=va&records=first-lien-owner-occupied-1-4-family-records&field_descriptions=labels 
+    2. https://rapidapi.com/s.mahmoud97/api/zillow56/ 
+    3. https://rapidapi.com/brahimboussaa1998/api/realtor-com-scraper/ 
