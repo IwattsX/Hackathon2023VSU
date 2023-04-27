@@ -49,30 +49,38 @@ agentsList = []
 
 prices = []
 pricesCountDict = {}
-
+addressWCounts = []
 with open("ZillowRes.json", 'r') as DataFile:
     data = json.load(DataFile)
     li = data['results']
+    print(li)
     count = 0
     for element in li:
         #NOT Petersburg,VA otherwise use the loop (Zipcode too)
         if element["state"] != 'VA' or element['zipcode'] != "23803" or element['city'] != 'Petersburg': 
            continue
         count +=1
+        addressWCounts.append([count, element['streetAddress']])
         for key, value in element.items():
+            print(f"{key} : {value}")
+            print("-------")
             petersburg_Houses.append([count, key, value])
             if key == 'price' :
                 if value == 0:
                      continue
                 prices.append(value)
-                pricesCountDict[value] = count
+                pricesCountDict[value] = addressWCounts[count-1][1]
 
 
 # dict(sorted(pricesCountDict.items()))
+sortPricesList = []
 quickSort(prices, 0, len(prices) - 1)
 print(prices)
 for i in range(len(prices)):
      print(f"{prices[i]} : {pricesCountDict[prices[i]]}")
+     sortPricesList.append([prices[i], pricesCountDict[prices[i]]])
+
+print(sortPricesList)
 
 
 
@@ -110,8 +118,24 @@ while i < len(li) - 3:
     listA.append([li[i],li[i+1],li[i+2], li[i+3]])
     i += 4
 
-print(len(listA))
+RealtorRatingsDict = {}
+for i in listA:
+     RealtorRatingsDict[i[0].casefold()] = []
+for i in listA:
+     listTemp = [i[1], i[2], i[3]]
+     RealtorRatingsDict[i[0].casefold()].append(listTemp)
+# print(RealtorRatingsDict)
+for k,v in RealtorRatingsDict.items():
+     print(f"{k} : {v}")
+     print()
+# print(len(listA))
 print(listA)
 
+obj = {}
+for i in sortPricesList:
+     obj[i[1]] = i[0]
 
-
+with open("HouseInformation.json", 'w') as houseFile:
+    text = json.dumps(obj, sort_keys=True, indent=4)
+    houseFile.write(text)
+     
