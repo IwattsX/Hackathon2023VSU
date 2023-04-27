@@ -8,33 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div class="loan-calculator">
-        <h2>Loan Calculator</h2>
-        <form>
-            <a href="#" class="logout-link" onclick="logout()">Logout</a>
-            <label for="loan-amount">Loan Amount:</label>
-            <input type="number" id="loan-amount" name="loan-amount" required>
-    
-            <label for="interest-rate">Interest Rate:</label>
-            <input type="number" id="interest-rate" name="interest-rate" required>
-    
-            <label for="loan-term">Loan Term (in years):</label>
-            <input type="number" id="loan-term" name="loan-term" required>
-    
-            <label for="monthly-payment">Monthly Payment:</label>
-            <input type="number" id="monthly-payment" name="monthly-payment" readonly>
-    
-            <input type="submit" value="Calculate" onclick="calculateLoan()">
-        </form>
-    </div>
-    
-    <div class="loan-summary">
-        <h2>Loan Summary</h2>
-        <p>Monthly Payment: <span id="monthly-payment-summary"></span></p>
-        <p>Total Payment: <span id="total-payment"></span></p>
-        <p>Total Interest: <span id="total-interest"></span></p>
-    </div> -->
-    <!-- Banner Section -->
     <section class="banner">
         <div class="banner-text">
             <h1>Find your next home</h1>
@@ -104,8 +77,24 @@
         </div>
         <a href="#" class="button">View More Properties</a>
     </section>
+    <!-- <div id="map">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?
+        key= AIzaSyCPZ_f6hzdKuw1RSfiaZ6lDMQbjt9yewxI"></script>
+         <script>
+        initMap();
+    </script>
 
+    </div> -->
+    <h3>My Google Maps</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCPZ_f6hzdKuw1RSfiaZ6lDMQbjt9yewxI", v: "beta"});</script>
 	<script src="script.js"></script>
     
 </body>
 </html>
+
+<!-- AIzaSyCPZ_f6hzdKuw1RSfiaZ6lDMQbjt9yewxI -->
