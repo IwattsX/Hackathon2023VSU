@@ -50,6 +50,7 @@ agentsList = []
 prices = []
 pricesCountDict = {}
 addressWCounts = []
+img_src = []
 with open("ZillowRes.json", 'r') as DataFile:
     data = json.load(DataFile)
     li = data['results']
@@ -60,6 +61,7 @@ with open("ZillowRes.json", 'r') as DataFile:
         if element["state"] != 'VA' or element['zipcode'] != "23803" or element['city'] != 'Petersburg': 
            continue
         count +=1
+        img_src.append([element['imgSrc'], element['streetAddress']])
         addressWCounts.append([count, element['streetAddress']])
         for key, value in element.items():
             print(f"{key} : {value}")
@@ -72,6 +74,7 @@ with open("ZillowRes.json", 'r') as DataFile:
                 pricesCountDict[value] = addressWCounts[count-1][1]
 
 
+
 # dict(sorted(pricesCountDict.items()))
 sortPricesList = []
 quickSort(prices, 0, len(prices) - 1)
@@ -80,7 +83,9 @@ for i in range(len(prices)):
      print(f"{prices[i]} : {pricesCountDict[prices[i]]}")
      sortPricesList.append([prices[i], pricesCountDict[prices[i]]])
 
-print(sortPricesList)
+print(f"THIS IS THE SORTED PRICING LIST {sortPricesList}")
+img_src.pop(0)
+print(img_src)
 
 
 
