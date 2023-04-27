@@ -1,117 +1,131 @@
 [
     {
-        "Quicken Loans": [
-            "A",
-            "B",
-            "C"
-        ],
-        "ROCKET": [
-            "A",
-            "B",
-            "C"
-        ]
+        "PURCHASE / POOR /  UP TO 100K -/ 100 TO 250 / 250 TO 400K / 400K AND UP": {
+            "Quicken Loans": [
+                "Get verified Approval Letter",
+                "High customer satification",
+                "24/7 online mortgage portal"
+            ],
+            "ROCKET": [
+                "Application sync with your bank",
+                "home loan experts available 24/7",
+                "C"
+            ]
+        }
     },
     {
-        "Quicken Loans": [
-            "A",
-            "B",
-            "C"
-        ],
-        "ROCKET": [
-            "A",
-            "B",
-            "C"
-        ],
-        "AmeriValue": [
-            "A",
-            "B",
-            "C"
-        ],
-        "VA Rate Guide": [
-            "A",
-            "B",
-            "C"
-        ],
-        "Refi Rate Guide": [
-            "A",
-            "B",
-            "C"
-        ]
+        "REFINANCE - POOR - UP TO 100K": {
+            "Quicken Loans": [
+                "Rate: 9.8",
+                "Get verified Approval Letter",
+                "High customer satification",
+                "24/7 online mortgage portal"
+            ],
+            "ROCKET": [
+                "Application sync with your bank",
+                "home loan experts available 24/7",
+                "C"
+            ],
+            "AmeriValue": [
+                "A",
+                "B",
+                "C"
+            ],
+            "VA Rate Guide": [
+                "A",
+                "B",
+                "C"
+            ],
+            "Refi Rate Guide": [
+                "A",
+                "B",
+                "C"
+            ]
+        }
     },
     {
-        "Quicken Loans": [
-            "A",
-            "B",
-            "C"
-        ],
-        "ROCKET": [
-            "A",
-            "B",
-            "C"
-        ],
-        "AmeriValue": [
-            "A",
-            "B",
-            "C"
-        ],
-        "Refi Rate Guide": [
-            "A",
-            "B",
-            "C"
-        ],
-        "UNLOCK": [
-            "A",
-            "B",
-            "C"
-        ]
+        "HOME EQUITY - POOR - UP TO 100K": {
+            "Quicken Loans": [
+                "Rate: 9.8",
+                "Get verified Approval Letter",
+                "High customer satification",
+                "24/7 online mortgage portal"
+            ],
+            "ROCKET": [
+                "Application sync with your bank",
+                "home loan experts available 24/7",
+                "C"
+            ],
+            "AmeriValue": [
+                "A",
+                "B",
+                "C"
+            ],
+            "Refi Rate Guide": [
+                "A",
+                "B",
+                "C"
+            ],
+            "UNLOCK": [
+                "A",
+                "B",
+                "C"
+            ]
+        }
     },
     {
-        "Quicken Loans": [
-            "A",
-            "B",
-            "C"
-        ],
-        "ROCKET": [
-            "A",
-            "B",
-            "C"
-        ],
-        "AmeriSave": [
-            "A",
-            "B",
-            "C"
-        ],
-        "Lending Tree": [
-            "A",
-            "B",
-            "C"
-        ]
+        "PURCHASE - FAIR - UP TO 100K": {
+            "Quicken Loans": [
+                "Rate: 9.8",
+                "Get verified Approval Letter",
+                "High customer satification",
+                "24/7 online mortgage portal"
+            ],
+            "ROCKET": [
+                "Application sync with your bank",
+                "home loan experts available 24/7",
+                "C"
+            ],
+            "AmeriSave": [
+                "A",
+                "B",
+                "C"
+            ],
+            "Lending Tree": [
+                "A",
+                "B",
+                "C"
+            ]
+        }
     },
     {
-        "Quicken Loans": [
-            "A",
-            "B",
-            "C"
-        ],
-        "ROCKET": [
-            "A",
-            "B",
-            "C"
-        ],
-        "AmeriSave": [
-            "A",
-            "B",
-            "C"
-        ],
-        "Lending Tree": [
-            "A",
-            "B",
-            "C"
-        ],
-        "Veterns United": [
-            "A",
-            "B",
-            "C"
-        ]
+        "PURCHASE - FAIR - 100K TO 250K - 250K TO 400K - 400K AND UP": {
+            "Quicken Loans": [
+                "Rate: 9.8",
+                "A",
+                "B",
+                "C"
+            ],
+            "ROCKET": [
+                "A",
+                "B",
+                "C"
+            ],
+            "AmeriSave": [
+                "A",
+                "B",
+                "C"
+            ],
+            "Lending Tree": [
+                "A",
+                "B",
+                "C"
+            ],
+            "Veterns United": [
+                "A",
+                "B",
+                "C"
+            ]
+        }
     }
 ]

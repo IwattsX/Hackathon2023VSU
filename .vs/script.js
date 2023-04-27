@@ -40,35 +40,24 @@ function calculateLoan() {
     const loanSummaryEl = document.getElementById("loan-summary");
     loanSummaryEl.style.display = "none";
   }
-//   function initMap() {
-//     // Create a new map object
-//     var map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: 37.5407, lng: -77.4360 },
-//     zoom: 10
-//     });
-//     }
-    
-//     // Load the map when the webpage is loaded
-//     google.maps.event.addDomListener(window, "load", initMap);
-// Initialize and add the map
 // let map;
 
 // async function initMap() {
-  // The location of Uluru
-  // const position = { lat: 37.2279, lng: -77.4019 };
-  // Request needed libraries.
-  //@ts-ignore
-  // const { Map } = await google.maps.importLibrary("maps");
-  // const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+//   // The location of Uluru
+//   const position = { lat: 37.2279, lng: -77.4019 };
+//   // Request needed libraries.
+//   //@ts-ignore
+//   const { Map } = await google.maps.importLibrary("maps");
+//   const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
-  // map = new Map(document.getElementById("map"), {
-  //   zoom: 12,
-  //   center: position,
-  //   mapId: "DEMO_MAP_ID",
-  // });
+//   // The map, centered at Uluru
+//   map = new Map(document.getElementById("map"), {
+//     zoom: 12,
+//     center: position,
+//     mapId: "DEMO_MAP_ID",
+//   });
 
-  // The marker, positioned at Uluru
+//   // The marker, positioned at Uluru
 //   const marker = new AdvancedMarkerView({
 //     map: map,
 //     position: position,
@@ -77,80 +66,42 @@ function calculateLoan() {
 // }
 
 // initMap();
-// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-function initAutocomplete() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -33.8688, lng: 151.2195 },
-    zoom: 13,
-    mapTypeId: "roadmap",
+
+// for (var i = 0; i < properties.length; i++) {
+//     var property = properties[i];
+//     var marker = new google.maps.Marker({
+//         position: {lat: property.latitude, lng: property.longitude},
+//         map: map,
+//         title: property.address
+//     });
+//     }
+    
+//     // Load the map when the webpage is loaded
+//     google.maps.event.addDomListener(window, "load", initMap);
+// Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: 37.2279, lng: -77.4019 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
   });
-  // Create the search box and link it to the UI element.
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
 
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener("bounds_changed", () => {
-    searchBox.setBounds(map.getBounds());
-  });
-
-  let markers = [];
-
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener("places_changed", () => {
-    const places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-      return;
-    }
-
-    // Clear out the old markers.
-    markers.forEach((marker) => {
-      marker.setMap(null);
-    });
-    markers = [];
-
-    // For each place, get the icon, name and location.
-    const bounds = new google.maps.LatLngBounds();
-
-    places.forEach((place) => {
-      if (!place.geometry || !place.geometry.location) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-
-      const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
-
-      // Create a marker for each place.
-      markers.push(
-        new google.maps.Marker({
-          map,
-          icon,
-          title: place.name,
-          position: place.geometry.location,
-        })
-      );
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-    map.fitBounds(bounds);
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "Uluru",
   });
 }
 
-window.initAutocomplete = initAutocomplete;
+initMap();
