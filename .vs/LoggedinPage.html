@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   ]
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div class="loan-calculator">
-        <h2>Loan Calculator</h2>
-        <form>
-            <a href="#" class="logout-link" onclick="logout()">Logout</a>
-            <label for="loan-amount">Loan Amount:</label>
-            <input type="number" id="loan-amount" name="loan-amount" required>
-    
-            <label for="interest-rate">Interest Rate:</label>
-            <input type="number" id="interest-rate" name="interest-rate" required>
-    
-            <label for="loan-term">Loan Term (in years):</label>
-            <input type="number" id="loan-term" name="loan-term" required>
-    
-            <label for="monthly-payment">Monthly Payment:</label>
-            <input type="number" id="monthly-payment" name="monthly-payment" readonly>
-    
-            <input type="submit" value="Calculate" onclick="calculateLoan()">
-        </form>
-    </div>
-    
-    <div class="loan-summary">
-        <h2>Loan Summary</h2>
-        <p>Monthly Payment: <span id="monthly-payment-summary"></span></p>
-        <p>Total Payment: <span id="total-payment"></span></p>
-        <p>Total Interest: <span id="total-interest"></span></p>
-    </div> -->
-    <!-- Banner Section -->
     <section class="banner">
         <div class="banner-text">
             <h1>Find your next home</h1>
@@ -100,8 +74,18 @@
         </div>
         <a href="#" class="button">View More Properties</a>
     </section>
+    <div id="map">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?
+        key= AIzaSyCPZ_f6hzdKuw1RSfiaZ6lDMQbjt9yewxI"></script>
+         <script>
+        initMap();
+    </script>
+
+    </div>
 
 	<script src="script.js"></script>
     
 </body>
 </html>
+
+<!-- AIzaSyCPZ_f6hzdKuw1RSfiaZ6lDMQbjt9yewxI -->

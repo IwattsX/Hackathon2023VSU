@@ -300,3 +300,8 @@ nav ul li a:hover {
     margin: 40px auto 0;
     max-width: 200px;
     }
+    /* map */
+    #map {
+        height: 500px;
+        width: 100%;
+        }

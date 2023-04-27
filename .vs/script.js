@@ -40,4 +40,13 @@ function calculateLoan() {
     const loanSummaryEl = document.getElementById("loan-summary");
     loanSummaryEl.style.display = "none";
   }
-  
+  function initMap() {
+    // Create a new map object
+    var map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 37.5407, lng: -77.4360 },
+    zoom: 10
+    });
+    }
+    
+    // Load the map when the webpage is loaded
+    google.maps.event.addDomListener(window, "load", initMap);
