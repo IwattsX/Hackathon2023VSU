@@ -47,3 +47,26 @@ function calculateLoan() {
   function map() {
     window.location.href = "map.html";
   }
+  fetch('AgentRes.txt')
+	.then(response => response.text())
+	.then(data => {
+		const rows = data.split('\n').filter(row => row.trim() !== '');
+		const tbody = document.querySelector('#agent-table tbody');
+
+		rows.forEach(row => {
+			const [location, rating, email, Name ] = row.split(',').map(value => value.trim());
+			const tr = document.createElement('tr');
+			tr.innerHTML = `
+				<td>${location}</td>
+				<td class="rating rating-${rating}">${rating}</td>
+				<td>${email}</td>
+				<td>${Name} </td>
+			`;
+			tbody.appendChild(tr);
+		});
+	})
+	.catch(error => console.error(error));
+  
+  
+
+  
