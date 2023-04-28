@@ -81,7 +81,7 @@ label {
     padding: 20px;
     margin: 20px auto;
     max-width: 500px;
-    float: left;
+    float: right;
     
 
   }
@@ -150,7 +150,7 @@ label {
     top: 20px;
     right: 20px;
     font-size: 18px;
-    color: #2196f3;
+    color: #080809;
     text-decoration: none;
   }
   
@@ -192,7 +192,7 @@ nav ul li a:hover {
 
 /* Banner Section */
 .banner {
-    background-image: url('Petersburg.png');
+    background-image: url('Home.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
@@ -201,6 +201,9 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.Trends{
+  background-image: url('Roadmap.png');
 }
 
 .banner-text h1 {
