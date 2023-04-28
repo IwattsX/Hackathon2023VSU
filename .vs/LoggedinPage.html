@@ -17,9 +17,10 @@
             <h1>Find your next home</h1>
             <p>Search homes for sale and for rent, and connect with real estate professionals in your area.</p>
             <form>
-                <input type="text" id="search-input" placeholder="Search by address, neighborhood, city, or ZIP code">
-                 <button type="button"onclick="HousePrices()" >Search</button> 
-            </form>
+                <input type="text" id="zillow-search-addresst" placeholder="Enter address, city, or ZIP code">
+                <button type="button" id="zillow-search-button">Search</button>
+              </form>
+              
         </div>
     </section>
     <center>
@@ -75,6 +76,7 @@
             <input type="submit" value="Calculate" onclick="calculateLoan()">
         </form>
     </div>
+    <body>
     <div class="agent-rating">
         <h2>Agent Rating Chart</h2>
         <table id="agent-table">
@@ -86,10 +88,10 @@
                     <th>Name</th>
                 </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody> </tbody>
         </table>
     </div>
+</body>
     
       
     

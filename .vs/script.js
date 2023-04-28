@@ -129,6 +129,7 @@ fetch('HouseInfo.txt')
     }
   });
 });
+
 // Load data from HouseInfo.txt
 fetch('HouseInfo.txt')
 	.then(response => response.text())
@@ -136,7 +137,7 @@ fetch('HouseInfo.txt')
 		// Split data into lines and parse each line into an object
 		const lines = data.trim().split('\n');
 		const houses = lines.map(line => {
-			const [address, price, image, bedrooms, bathrooms, sqft] = line.split(',');
+			const [address, price, image, bedrooms, bathrooms, sqft, ] = line.split(',');
 			return {
 				address,
 				price: parseFloat(price),
@@ -150,25 +151,54 @@ fetch('HouseInfo.txt')
 		houses.sort((a, b) => b.price - a.price);
 		// Render houses
 		const propertyList = document.getElementById('property-list');
-		houses.forEach(house => {
-			const property = document.createElement('div');
-			property.className = 'property';
-			const image = document.createElement('img');
-			image.src = house.image;
-			image.alt = 'Property Image';
-			const propertyDetails = document.createElement('div');
-			propertyDetails.className = 'property-details';
-			const address = document.createElement('h3');
-			address.textContent = house.address;
-			const price = document.createElement('p');
-			price.textContent = '$' + house.price.toLocaleString() + ` | ${house.bedrooms} bd | ${house.bathrooms} ba | ${house.sqft.toLocaleString()} sqft`;
-			propertyDetails.appendChild(address);
-			propertyDetails.appendChild(price);
-			property.appendChild(image);
-			property.appendChild(propertyDetails);
-			propertyList.appendChild(property);
+		const renderHouses = (houses) => {
+			propertyList.innerHTML = '';
+			houses.forEach(house => {
+				const property = document.createElement('div');
+				property.className = 'property';
+				const image = document.createElement('img');
+				image.src = house.image;
+				image.alt = 'Property Image';
+				const propertyDetails = document.createElement('div');
+				propertyDetails.className = 'property-details';
+				const address = document.createElement('h3');
+				address.textContent = house.address;
+				const price = document.createElement('p');
+				price.textContent = '$' + house.price.toLocaleString() + ` | ${house.bedrooms} bd | ${house.bathrooms} ba | ${house.sqft.toLocaleString()} sqft`;
+				propertyDetails.appendChild(address);
+				propertyDetails.appendChild(price);
+				property.appendChild(image);
+				property.appendChild(propertyDetails);
+				propertyList.appendChild(property);
+				// Add click event listener to navigate to property address
+				property.addEventListener('click', () => {
+					window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(house.address)}`);
+				});
+			});
+		};
+		renderHouses(houses);
+		// Add click event listener to search button
+		const searchInput = document.getElementById('search-input');
+		const searchButton = document.getElementById('search-button');
+		searchButton.addEventListener('click', () => {
+			const searchText = searchInput.value.trim().toLowerCase();
+			if (searchText) {
+				const filteredHouses = houses.filter(house => house.address.toLowerCase().includes(searchText));
+				renderHouses(filteredHouses);
+			} else {
+				renderHouses(houses);
+			}
 		});
 	});
+
+  const searchbutton = document.getElementById('zillow-search-button');
+  searchbutton.addEventListener('click', () => {
+    const addressInput = document.getElementById('zillow-search-addresst');
+    const query = addressInput.value.trim().replace(/\s+/g, '+');
+    const url = `https://www.zillow.com/homes/${query}_rb/`;
+    window.location.href = url;
+  });
+  
 
 
 
