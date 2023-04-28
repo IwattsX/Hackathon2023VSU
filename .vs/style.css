@@ -81,6 +81,9 @@ label {
     padding: 20px;
     margin: 20px auto;
     max-width: 500px;
+    float: left;
+    
+
   }
   
   .loan-calculator h2 {
@@ -189,7 +192,7 @@ nav ul li a:hover {
 
 /* Banner Section */
 .banner {
-    background-image: url('https://via.placeholder.com/1920x1080.png');
+    background-image: url('Petersburg.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
@@ -201,13 +204,13 @@ nav ul li a:hover {
 }
 
 .banner-text h1 {
-    color: #ffffff;
+    color: #0a0a0a;
     font-size: 72px;
     margin-bottom: 20px;
 }
 
 .banner-text p {
-    color: #ffffff;
+    color: #0e0d0d;
     font-size: 24px;
     margin-bottom: 40px;
 }
@@ -300,9 +303,25 @@ nav ul li a:hover {
     margin: 40px auto 0;
     max-width: 200px;
     }
+
+
+   .agent-rating{
+    float: right;
+   }
     table {
       margin: 20px auto;
       border-collapse: collapse;
+    }
+    
+    tbody {
+      height: 300px;
+      overflow-y: scroll;
+      display: block;
+
+    }
+    thead{ 
+      display: block;
+
     }
     
     table th,
@@ -314,22 +333,24 @@ nav ul li a:hover {
     
     table th {
       background-color: #f2f2f2;
+      padding: 50px;
     }
     
     table td.rating {
       font-weight: bold;
+      background-color: #ef0808;
     }
     
     table td.rating-1 {
-      background-color: #ff9999;
+      background-color: #ef0808;
     }
     
     table td.rating-2 {
-      background-color: #ffcc66;
+      background-color: #e9be68;
     }
     
     table td.rating-3 {
-      background-color: #ffff66;
+      background-color: #a4de80;
     }
     
     table td.rating-4 {
@@ -339,4 +360,3 @@ nav ul li a:hover {
     table td.rating-5 {
       background-color: #66ffcc;
     }
-    
