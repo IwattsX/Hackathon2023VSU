@@ -50,7 +50,8 @@ agentsList = []
 prices = []
 pricesCountDict = {}
 addressWCounts = []
-img_src = []
+livingAreasTemp = 0
+bedroom_Temp = 0
 with open("ZillowRes.json", 'r') as DataFile:
     data = json.load(DataFile)
     li = data['results']
@@ -65,13 +66,17 @@ with open("ZillowRes.json", 'r') as DataFile:
         for key, value in element.items():
             print(f"{key} : {value}")
             print("-------")
+            if(key == 'livingArea'):
+                 livingAreasTemp = value
+            if(key == 'bedrooms'):
+                 print("ELEMENT HAS BEDROOMS")
+                 bedroom_Temp = value
             petersburg_Houses.append([count, key, value])
             if key == 'price' :
                 if value == 0:
                      continue
                 prices.append(value)
-                img_src.append([value, element['imgSrc'], element['streetAddress']])
-                pricesCountDict[value] =[addressWCounts[count-1][1], element['imgSrc']]
+                pricesCountDict[value] =[addressWCounts[count-1][1], element['imgSrc'], bedroom_Temp, element['bathrooms'], livingAreasTemp]
 
 
 
@@ -88,8 +93,6 @@ for i in range(len(prices)):
      sortPricesList.append([prices[i], pricesCountDict[prices[i]]])
 
 print(f"THIS IS THE SORTED PRICING LIST {sortPricesList}")
-img_src.pop(0)
-print(img_src)
 
 
 
@@ -141,12 +144,13 @@ for k,v in RealtorRatingsDict.items():
 print(listA)
 
 obj1 = {}
+# sortPricesList.pop(0)
 print(f"This is sorted prices list\n{sortPricesList}")
 for i in sortPricesList:
      print("This is i in sortPricesList")
      print(i)
      print()
-     obj1[i[1][0]] = [i[0], i[1][1]]
+     obj1[i[1][0]] = [i[0], i[1][1], i[1][2], i[1][3], i[1][4]]
 
 print(f"This is obj1\n{obj1}")
 

@@ -1,40 +1,6 @@
 {
     "results": [
         {
-            "bathrooms": 0.0,
-            "city": "Petersburg",
-            "country": "USA",
-            "currency": "USD",
-            "daysOnZillow": 0,
-            "group_type": "BUILDER_COMMUNITY",
-            "homeStatus": "FOR_SALE",
-            "homeStatusForHDP": "FOR_SALE",
-            "homeType": "SINGLE_FAMILY",
-            "imgSrc": "https://photos.zillowstatic.com/fp/c84bc97329546276ef6c04c2acf9a315-p_e.jpg",
-            "isFeatured": false,
-            "isNonOwnerOccupied": true,
-            "isPreforeclosureAuction": false,
-            "isPremierBuilder": true,
-            "isUnmappable": false,
-            "isZillowOwned": false,
-            "latitude": 37.203854,
-            "listing_sub_type": {
-                "is_newHome": true
-            },
-            "longitude": -77.46178,
-            "newConstructionType": "BUILDER_PLAN",
-            "price": 0.0,
-            "priceForHDP": 0.0,
-            "priceSuffix": "+",
-            "providerListingID": "30042720",
-            "shouldHighlight": false,
-            "state": "VA",
-            "streetAddress": "Homes Available Soon, Dancy Estates",
-            "unit": "# GZSMX5",
-            "zipcode": "23803",
-            "zpid": 2057933106
-        },
-        {
             "bathrooms": 1.0,
             "bedrooms": 2.0,
             "city": "Petersburg",
