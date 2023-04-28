@@ -12,7 +12,7 @@ function logout() {
 }
 
 function calculateLoan() {
-    event.preventDefault(); // add this line to prevent page refresh
+    event.preventDefault(); // added this line to prevent page refresh
 
     const loanAmount = document.getElementById('loan-amount').value;
     const interestRate = document.getElementById('interest-rate').value / 100 / 12;
@@ -23,9 +23,6 @@ function calculateLoan() {
     const totalInterest = totalPayment - loanAmount;
 
     document.getElementById('monthly-payment').value = monthlyPayment.toFixed(2);
-    document.getElementById('monthly-payment-summary').textContent = monthlyPayment.toFixed(2);
-    document.getElementById('total-payment').textContent = totalPayment.toFixed(2);
-    document.getElementById('total-interest').textContent = totalInterest.toFixed(2);
     return false
 
 }
@@ -37,11 +34,7 @@ function calculateLoan() {
     document.getElementById("interest-rate").value = "";
     document.getElementById("loan-term").value = "";
     document.getElementById("monthly-payment").value = "";
-    document.getElementById("total-payment").value = "";
-    document.getElementById("total-interest").value = "";
   
-    const loanSummaryEl = document.getElementById("loan-summary");
-    loanSummaryEl.style.display = "none";
     return false;
   }
  
@@ -70,7 +63,7 @@ function calculateLoan() {
     window.location.href = "HousePrices.html";
   }
 
-  // Read the data from the HouseInfo.txt file
+  // Reading the data from the HouseInfo.txt file
 fetch('HouseInfo.txt')
 .then(response => response.text())
 .then(data => {
@@ -80,11 +73,10 @@ fetch('HouseInfo.txt')
   const filteredLines = lines.filter(line => line.trim() !== '');
   // Extract the address, price, and image URL from each line
   const dataPoints = filteredLines.map(line => {
-    const [address, price, imageURL] = line.split(',');
+    const [address, prices,] = line.split(',');
     return {
       label: address,
-      data: price,
-      imageUrl: imageURL
+      data: prices,
     };
   });
   // Sort the dataPoints by price in acending order
@@ -114,23 +106,11 @@ fetch('HouseInfo.txt')
           }
         }]
       },
-      tooltips: {
-        callbacks: {
-          label: function(tooltipItem, data) {
-            const dataPoint = dataPoints[tooltipItem.index];
-            return `${dataPoint.label}: $${dataPoint.data}`;
-          },
-          afterLabel: function(tooltipItem, data) {
-            const dataPoint = dataPoints[tooltipItem.index];
-            return `<img src="${dataPoint.imageUrl}" width="200" height="150" />`;
-          }
-        }
-      }
     }
   });
 });
 
-// Load data from HouseInfo.txt
+// Loading data from HouseInfo.txt
 fetch('HouseInfo.txt')
 	.then(response => response.text())
 	.then(data => {
@@ -139,7 +119,7 @@ fetch('HouseInfo.txt')
 		const houses = lines.map(line => {
 			const [address, price, image, bedrooms, bathrooms, sqft, ] = line.split(',');
 			return {
-				address,
+				address: address,
 				price: parseFloat(price),
 				bedrooms: parseInt(bedrooms),
 				bathrooms: parseInt(bathrooms),
@@ -147,7 +127,7 @@ fetch('HouseInfo.txt')
 				image
 			};
 		});
-		// Sort houses by price in descending order
+		// Sorting houses by price in descending order
 		houses.sort((a, b) => b.price - a.price);
 		// Render houses
 		const propertyList = document.getElementById('property-list');
