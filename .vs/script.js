@@ -129,6 +129,47 @@ fetch('HouseInfo.txt')
     }
   });
 });
+// Load data from HouseInfo.txt
+fetch('HouseInfo.txt')
+	.then(response => response.text())
+	.then(data => {
+		// Split data into lines and parse each line into an object
+		const lines = data.trim().split('\n');
+		const houses = lines.map(line => {
+			const [address, price, image, bedrooms, bathrooms, sqft] = line.split(',');
+			return {
+				address,
+				price: parseFloat(price),
+				bedrooms: parseInt(bedrooms),
+				bathrooms: parseInt(bathrooms),
+				sqft: parseInt(sqft),
+				image
+			};
+		});
+		// Sort houses by price in descending order
+		houses.sort((a, b) => b.price - a.price);
+		// Render houses
+		const propertyList = document.getElementById('property-list');
+		houses.forEach(house => {
+			const property = document.createElement('div');
+			property.className = 'property';
+			const image = document.createElement('img');
+			image.src = house.image;
+			image.alt = 'Property Image';
+			const propertyDetails = document.createElement('div');
+			propertyDetails.className = 'property-details';
+			const address = document.createElement('h3');
+			address.textContent = house.address;
+			const price = document.createElement('p');
+			price.textContent = '$' + house.price.toLocaleString() + ` | ${house.bedrooms} bd | ${house.bathrooms} ba | ${house.sqft.toLocaleString()} sqft`;
+			propertyDetails.appendChild(address);
+			propertyDetails.appendChild(price);
+			property.appendChild(image);
+			property.appendChild(propertyDetails);
+			propertyList.appendChild(property);
+		});
+	});
+
 
 
   
