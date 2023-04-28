@@ -394,7 +394,7 @@ nav ul li a:hover {
       color: #666;
     }
     .Rates-button {
-      top: 20px;
+      top: 15px;
       right: 200px;
       position: absolute;
       display: inline-block;
@@ -410,9 +410,55 @@ nav ul li a:hover {
     
      
     }
+    .contact-button{
+      top: 15px;
+      right: 80px;
+      position: absolute;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #0074d9;
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
     
     .Rates-button:hover {
       background-color: #0062cc;
     }
+    .contact-button:hover {
+      background-color: #0062cc;
+    }
     
+    .contact form{
+      margin:1rem auto;
+      max-width: 70rem;
+      border-radius: .5rem;
+      box-shadow: var(--box-shadow);
+      padding:2rem;
+  }
+  
+  .contact form .box{
+      padding:1rem 1.5rem;
+      width:100%;
+      background: none;
+      color:var(--black);
+      font-size: 1.6rem;
+      text-transform: none;
+      margin:.7rem 0;
+      box-shadow: var(--box-shadow);
+      border-radius: .5rem;
+  }
+  
+  .contact form textarea{
+      height: 20rem;
+      resize: none;
+  }
+  
+  .contact form .box:focus{
+      box-shadow: var(--box-shadow-inset);
+  }
     
