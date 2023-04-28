@@ -6,7 +6,7 @@ body {
     color: #333333;
 }
 
-.Login-container {
+.container {
     margin: auto;
     width: 500px;
     padding: 50px;
@@ -191,7 +191,7 @@ nav ul li a:hover {
 }
 
 /* Banner Section */
-.Top-of-page {
+.banner {
     background-image: url('Home.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -206,7 +206,7 @@ nav ul li a:hover {
   background-image: url('Roadmap.png');
 }
 
-.Top-of-page-text h1 {
+.banner-text h1 {
     color: #0a0a0a;
     font-size: 72px;
     margin-bottom: 20px;
