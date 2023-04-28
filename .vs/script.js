@@ -79,12 +79,12 @@ fetch('HouseInfo.txt')
       data: prices,
     };
   });
-  // Sort the dataPoints by price in acending order
+  // Sorting the dataPoints by price in acending order
   dataPoints.sort((a, b) => a.data - b.data);
-  // Create an array of labels and an array of data
+  // Creating  an array of labels and an array of data
   const labels = dataPoints.map(dataPoint => dataPoint.label);
   const prices = dataPoints.map(dataPoint => dataPoint.data);
-  // Create a bar chart using Chart.js
+  // Creating a bar chart using Chart.js
   const ctx = document.getElementById('HouseChart').getContext('2d');
   const myChart = new Chart(ctx, {
     type: 'bar',
@@ -114,7 +114,7 @@ fetch('HouseInfo.txt')
 fetch('HouseInfo.txt')
 	.then(response => response.text())
 	.then(data => {
-		// Split data into lines and parse each line into an object
+		// Spliting data into lines and parse each line into an object
 		const lines = data.trim().split('\n');
 		const houses = lines.map(line => {
 			const [address, price, image, bedrooms, bathrooms, sqft, ] = line.split(',');
@@ -157,7 +157,7 @@ fetch('HouseInfo.txt')
 			});
 		};
 		renderHouses(houses);
-		// Add click event listener to search button
+		// Adding click event listener to search button
 		const searchInput = document.getElementById('search-input');
 		const searchButton = document.getElementById('search-button');
 		searchButton.addEventListener('click', () => {
