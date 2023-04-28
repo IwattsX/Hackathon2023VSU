@@ -393,4 +393,26 @@ nav ul li a:hover {
       font-size: 14px;
       color: #666;
     }
+    .Rates-button {
+      top: 20px;
+      right: 200px;
+      position: absolute;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #0074d9;
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    
+     
+    }
+    
+    .Rates-button:hover {
+      background-color: #0062cc;
+    }
+    
     
