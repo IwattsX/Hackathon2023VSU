@@ -303,10 +303,11 @@ nav ul li a:hover {
     margin: 40px auto 0;
     max-width: 200px;
     }
+    
 
 
    .agent-rating{
-    float: left;
+    float: right;
    }
     table {
       margin: 20px auto;
