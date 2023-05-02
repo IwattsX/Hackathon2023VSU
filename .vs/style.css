@@ -1,464 +1,99 @@
 
-body {
-    background-color: #F5F5F5;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333333;
-}
-
-.container {
-    margin: auto;
-    width: 500px;
-    padding: 50px;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-}
-
-h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #CCCCCC;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: #FFFFFF;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-input[type=submit]:hover {
-    background-color: #5cb85c;
-}
-
-label {
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-
-#error-message {
-    color: red;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-    font-size: 18px;
-}
-
-
-/* top styling */
-.dashboard-container {
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .loan-calculator {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 500px;
-    float: right;
-    
-
-  }
-  
-  .loan-calculator h2 {
-    margin-top: 0;
-  }
-  
-  .loan-calculator form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .loan-calculator label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .loan-calculator input[type="number"],
-  .loan-calculator input[type="submit"] {
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .loan-calculator input[type="submit"] {
-    background-color: #2196f3;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .loan-summary {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 500px;
-    display: none;
-  }
-  
-  .loan-summary h2 {
-    margin-top: 0;
-  }
-  
-  .loan-summary p {
-    margin: 10px 0;
-  }
-  
-  .loan-summary label {
-    font-weight: bold;
-  }
-  
-  .loan-summary input[type="number"] {
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .logout-link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 18px;
-    color: #080809;
-    text-decoration: none;
-  }
-  
-  .logout-link:hover {
-    text-decoration: underline;
-  }
-  
-nav {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-nav img {
-    height: 50px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    color: #007aff;
-}
-
-/* Banner Section */
 .banner {
-    background-image: url('Home.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.Trends{
-  background-image: url('Roadmap.png');
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
 }
 
-.banner-text h1 {
-    color: #0a0a0a;
-    font-size: 72px;
-    margin-bottom: 20px;
+.banner h1 {
+  font-size: 64px;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-.banner-text p {
-    color: #0e0d0d;
-    font-size: 24px;
-    margin-bottom: 40px;
+.banner h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 300;
 }
 
-.banner-text form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.banner .Tabs-button {
+  display: inline-block;
+  background-color: white;
+  color: #003366;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 36px;
+  margin-right: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.banner-text form input[type="text"] {
-    width: 500px;
-    height: 60px;
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+.banner .Tabs-button:hover {
+  background-color: #7dcdef;
 }
 
-.banner-text form button[type="submit"] {
-    width: 120px;
-    height: 60px;
-    font-size: 24px;
-    color: #ffffff;
-    background-color: #007aff;
-    border: none;
-    border-radius: 4px;
-    margin-left: 20px;
-}
-
-.banner-text form button[type="submit"]:hover {
-    background-color: #0059b3;
-}
 
 /* Featured Properties Section */
 
 .featured-properties {
-    background-color: #f9f9f9;
-    padding: 80px 20px;
-    }
-    
-    .featured-properties h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    }
-    
-    .property-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
-    }
-    
-    .property-card {
-    width: calc(33.33% - 20px);
-    margin-bottom: 40px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    }
-    
-    .property-card:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    
-    .property-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    }
-    
-    .property-details {
-    padding: 20px;
-    }
-    
-    .property-details h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    }
-    
-    .property-details p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    }
-    
-    .button {
-    display: block;
-    margin: 40px auto 0;
-    max-width: 200px;
-    }
-    
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
 
+.featured-properties h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
 
-   .agent-rating{
-    float: right;
-   }
-    table {
-      margin: 20px auto;
-      border-collapse: collapse;
-    }
-    
-    tbody {
-      height: 300px;
-      overflow-y: scroll;
-      display: block;
+.property-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-    }
-    thead{ 
-      display: block;
+.property-card {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
 
-    }
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.property-card .property-details {
+  margin-top: 20px;
+}
+
+.property-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.property-card p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
     
-    table th,
-    table td {
-      padding: 8px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-    
-    table th {
-      background-color: #f2f2f2;
-      padding: 50px;
-    }
-    
-    table td.rating {
-      font-weight: bold;
-      background-color: #ef0808;
-    }
-    
-    table td.rating-1 {
-      background-color: #ef0808;
-    }
-    
-    table td.rating-2 {
-      background-color: #e9be68;
-    }
-    
-    table td.rating-3 {
-      background-color: #a4de80;
-    }
-    
-    table td.rating-4 {
-      background-color: #99ff99;
-    }
-    
-    table td.rating-5 {
-      background-color: #66ffcc;
-    }
-    .properties {
-      padding: 20px;
-    }
-    
-    .properties h2 {
-      margin-top: 0;
-    }
-    
-    .property {
-      display: flex;
-      margin-bottom: 20px;
-    }
-    
-    .property img {
-      height: 200px;
-      width: 300px;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-    
-    .property-details h3 {
-      margin-top: 0;
-    }
-    
-    .property-details p {
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
-    .Rates-button {
-      top: 15px;
-      right: 200px;
-      position: absolute;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #0074d9;
-      color: #fff;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    
-     
-    }
-    .contact-button{
-      top: 15px;
-      right: 80px;
-      position: absolute;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #0074d9;
-      color: #fff;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    
-    .Rates-button:hover {
-      background-color: #0062cc;
-    }
-    .contact-button:hover {
-      background-color: #0062cc;
-    }
-    
-    .contact form{
-      margin:1rem auto;
-      max-width: 70rem;
-      border-radius: .5rem;
-      box-shadow: var(--box-shadow);
-      padding:2rem;
-  }
-  
-  .contact form .box{
-      padding:1rem 1.5rem;
-      width:100%;
-      background: none;
-      color:var(--black);
-      font-size: 1.6rem;
-      text-transform: none;
-      margin:.7rem 0;
-      box-shadow: var(--box-shadow);
-      border-radius: .5rem;
-  }
-  
-  .contact form textarea{
-      height: 20rem;
-      resize: none;
-  }
-  
-  .contact form .box:focus{
-      box-shadow: var(--box-shadow-inset);
-  }
     

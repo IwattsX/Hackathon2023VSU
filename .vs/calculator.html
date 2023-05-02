@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcultion.css">
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+     
+        <section class="left-side">
+            <div class="box">
+              <h2 class="What-is-a-loan">What is a Loan?</h2>
+              <p class="What-is-a-loan">A loan is a commitment. Whether your loan lasts only two years or stretches into the next 15, you must make a conscious effort to ensure you make your monthly payments. 
+                Knowing how much you have to set aside means you’re less likely to miss payments once you begin repayments.</p>
+            </div>
+          
+            <div class="box">
+              <h2 class="factors-to-consider">Loan Factors to Consider</h2>
+              <div class="box-inner">
+                <h3 class="principal">Principal:</h3>
+                <p class="principal">The amount you borrow from your lender is the principal. It is the basis of any kind of loan. 
+                  For example, if you borrow $20,000 for a personal loan, your principal is $20,000.</p>
+          
+                <h3 class="loan-term">Loan Term:</h3>
+                <p class="loan-term">The loan term is how long your lender allows you to repay your loan. Different loans have varying loan terms. 
+                  They can be as short as one or two years for a personal loan, while mortgages can run for 15 or 30 years.</p>
+          
+                <h3 class="interset-rate">Interest Rate:</h3>
+                <p class="interset-rate">A lender charges an amount for lending you the money you need — that's your interest rate. It's often a percentage of how much you borrow and is affected by several factors, including your credit score. 
+                  You'll spend more per month with a higher interest rate.</p>
+              </div>
+            </div>
+          </section>
+          
+       
+             <div class="loan-calculator">
+                <h2>Loan Calculator</h2>
+                <form>
+            
+            
+                    <label for="loan-amount">Loan Amount:</label>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+    
+                    <label for="interest-rate">Interest Rate:</label>
+                    <input type="number" id="interest-rate" name="interest-rate" required>
+    
+                    <label for="loan-term">Loan Term (in years):</label>
+                    <input type="number" id="loan-term" name="loan-term" required>
+    
+                    <label for="monthly-payment">Monthly Payment:</label>
+                    <input type="number" id="monthly-payment" name="monthly-payment" readonly>
+    
+                    <input type="submit" value="Calculate" onclick="calculateLoan()">
+                </form>
+            </div>
+       
+    
+    </main>
+</body>
+
+</html>
