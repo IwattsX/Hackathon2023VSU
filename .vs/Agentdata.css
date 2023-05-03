@@ -1,0 +1,83 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f1f3f6;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Agent Rating styles */
+.agent-rating {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    animation: fade-in 0.5s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+td.rating-0 {
+    background-color: #f04242;
+  }
+td.rating-1 {
+    background-color: #ffcccc;
+  }
+  
+  td.rating-2 {
+    background-color: #ffd9b3;
+  }
+  
+  td.rating-3 {
+    background-color: #ffffcc;
+  }
+  
+  td.rating-4 {
+    background-color: #ccffcc;
+  }
+  
+  td.rating-5 {
+    background-color: #10e075;
+  }
+  
